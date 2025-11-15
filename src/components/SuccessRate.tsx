@@ -24,35 +24,35 @@ const stats = [
 
 const SuccessRate = () => {
   return (
-    <section className="py-24 px-4 bg-card/50">
+    <section className="py-12 sm:py-16 md:py-24 px-4 bg-card/50">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-4">
             Our Success Record
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Trusted by thousands of agents and partners with proven results
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
               <Card
                 key={index}
-                className="p-8 text-center space-y-4 bg-card border-border hover:border-gold/50 transition-all duration-300"
+                className="p-4 sm:p-6 md:p-8 text-center space-y-3 sm:space-y-4 bg-card border-border hover:border-gold/50 transition-all duration-300"
               >
                 <div className="flex justify-center">
-                  <div className="p-4 bg-gold/10 rounded-full">
-                    <Icon className="h-8 w-8 text-gold" />
+                  <div className="p-3 sm:p-4 bg-gold/10 rounded-full">
+                    <Icon className="h-6 w-6 sm:h-8 sm:w-8 text-gold" />
                   </div>
                 </div>
-                <div className="text-5xl font-bold text-gold">{stat.value}</div>
-                <div className="text-xl font-semibold text-foreground">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gold">{stat.value}</div>
+                <div className="text-base sm:text-lg md:text-xl font-semibold text-foreground">
                   {stat.label}
                 </div>
-                <p className="text-muted-foreground">{stat.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{stat.description}</p>
               </Card>
             );
           })}

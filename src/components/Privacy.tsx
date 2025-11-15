@@ -26,9 +26,9 @@ const privacyPoints = [
 
 const Privacy = () => {
   return (
-    <section className="py-24 px-4 bg-card/50">
+    <section className="py-12 sm:py-16 md:py-24 px-4 bg-card/50">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-6">
             <Shield className="h-5 w-5 text-gold" />
             <span className="text-gold font-semibold">Privacy & Security</span>
