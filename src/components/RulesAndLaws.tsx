@@ -1,5 +1,6 @@
 import { Scale, BookOpen, Gavel, AlertCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import crimePrevention from "@/assets/crime-prevention.jpg";
 
 const laws = [
   {
@@ -108,6 +109,15 @@ const RulesAndLaws = () => {
             </div>
           </div>
         </Card>
+
+        {/* Crime Prevention Image */}
+        <div className="mt-8 sm:mt-12 md:mt-16 rounded-2xl overflow-hidden">
+          <img 
+            src={crimePrevention} 
+            alt="Crime Prevention - Stay Safe" 
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </div>
     </section>
   );
