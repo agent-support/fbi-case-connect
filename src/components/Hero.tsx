@@ -1,9 +1,18 @@
 import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import fbiBuildingBg from "@/assets/fbi-building.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-24 sm:py-32 pt-24">
+    <section 
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-24 sm:py-32 pt-24 relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${fbiBuildingBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
         <div className="flex justify-center mb-4 sm:mb-8">
           <div className="bg-background p-4 sm:p-8 rounded-lg">

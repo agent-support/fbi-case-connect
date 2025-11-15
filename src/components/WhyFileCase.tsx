@@ -1,5 +1,6 @@
 import { FileText, Lock, Clock, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import fbiHeadquarters from "@/assets/fbi-headquarters-visitors.jpg";
 
 const reasons = [
   {
@@ -32,6 +33,15 @@ const WhyFileCase = () => {
   return (
     <section className="py-12 sm:py-16 md:py-24 px-4">
       <div className="container mx-auto max-w-6xl">
+        {/* FBI Headquarters Image */}
+        <div className="mb-8 sm:mb-12 md:mb-16 rounded-2xl overflow-hidden">
+          <img 
+            src={fbiHeadquarters} 
+            alt="FBI Headquarters with Visitors" 
+            className="w-full h-48 sm:h-64 md:h-96 object-cover"
+          />
+        </div>
+        
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-4">
             Why File a Case?
