@@ -29,6 +29,13 @@ const Hero = () => {
         <div className="pt-6">
           <Button 
             size="lg" 
+            onClick={() => {
+              // @ts-ignore - Jivo is loaded from external script
+              if (window.jivo_api) {
+                // @ts-ignore
+                window.jivo_api.open();
+              }
+            }}
             className="bg-secondary hover:bg-secondary/80 text-foreground border border-border px-8 py-6 text-lg font-semibold rounded-xl transition-all hover:scale-105"
           >
             <AlertTriangle className="mr-2 h-5 w-5" />
