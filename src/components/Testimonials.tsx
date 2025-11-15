@@ -34,38 +34,38 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 px-4 bg-background">
+    <section className="py-12 sm:py-16 md:py-24 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-4">
             Trusted by FBI Personnel
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Hear from agents and analysts who rely on our support portal daily
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-8 space-y-6 bg-card border-border hover:border-gold/50 transition-all duration-300"
+              className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 bg-card border-border hover:border-gold/50 transition-all duration-300"
             >
-              <Quote className="h-10 w-10 text-gold opacity-50" />
-              <p className="text-lg text-muted-foreground italic leading-relaxed">
+              <Quote className="h-8 w-8 sm:h-10 sm:w-10 text-gold opacity-50" />
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground italic leading-relaxed">
                 "{testimonial.quote}"
               </p>
-              <div className="flex items-center gap-4 pt-4 border-t border-border">
+              <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4 border-t border-border">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-gold"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-gold flex-shrink-0"
                 />
                 <div>
-                  <div className="font-semibold text-foreground">
+                  <div className="font-semibold text-foreground text-sm sm:text-base">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-gold">{testimonial.role}</div>
+                  <div className="text-xs sm:text-sm text-gold">{testimonial.role}</div>
                 </div>
               </div>
             </Card>
